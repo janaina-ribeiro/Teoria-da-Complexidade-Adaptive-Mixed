@@ -3,7 +3,7 @@ import io
 import os
 import sys
 
-from bpp_am import BPPSolver
+from app.bpp_am import BPPSolver
 from save_results import ResultadosExperimento
 
 def main():
