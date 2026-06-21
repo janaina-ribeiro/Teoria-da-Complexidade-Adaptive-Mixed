@@ -17,7 +17,7 @@ Este repositório contém a implementação da meta-heurística **Adaptive Mixed
 2. Abra o terminal na pasta raiz do projeto.
 3. Para executar o código, basta rodar o comando:
    ```bash
-  python -m app.main --all
+     python -m app.main --all
    ```
 
 Os resultados dos experimentos (como o número de *bins* utilizados, tempo de execução, etc.) serão salvos no arquivo `resultado.txt` e também serão impressos no console.
