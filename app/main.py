@@ -4,7 +4,7 @@ import os
 import sys
 
 from app.bpp_am import BPPSolver
-from save_results import ResultadosExperimento
+from app.save_results import ResultadosExperimento
 
 def main():
     if hasattr(sys.stdout, "buffer"):

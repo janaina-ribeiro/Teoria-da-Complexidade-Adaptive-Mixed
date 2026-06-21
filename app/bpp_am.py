@@ -352,8 +352,12 @@ class BPPSolver:
             strategies = cls.executar_todas_estrategias(items, C)
             total_time += time.perf_counter() - t0
 
-            best = min(strategies, key=lambda x: len(x[1]))
-            run_bests.append(len(best[1]))
+            min_len = min(len(x[1]) for x in strategies)
+            empatadas = [x[0] for x in strategies if len(x[1]) == min_len]
+            best_bins = next(x[1] for x in strategies if len(x[1]) == min_len)
+            best = (", ".join(empatadas), best_bins)
+
+            run_bests.append(min_len)
             if best_global[0] is None or len(best[1]) < len(best_global[1]):
                 best_global = best
 
@@ -375,6 +379,7 @@ class BPPSolver:
             "best_strategy": best_global[0],
             "best_bins":     best_global[1],
             "lb":            lb,
+            "todas_estrategias": strategies 
         }
 
 
@@ -410,17 +415,23 @@ class BPPSolver:
 
         imprimir_melhor_solucao
         -----------------------------------------------
-        Exibe a melhor solução encontrada para uma instância, listando o conteúdo de cada bin.
+        Exibe a melhor solução encontrada e detalha O VALOR USADO, LIVRE E A HEURÍSTICA para todas as linhas (pedida do usuário).
         Entrada: r (dicionário retornado por run_experiment).
         Retorno: nenhum (imprime diretamente no terminal).
 
         """
+        
+        print(f"\n  [--- DETALHAMENTO DAS HEURISTICAS (PURAS E MISTAS) - {r['instance']} ---]")
+        for nome_estrategia, bins in r["todas_estrategias"]:
+            if len(bins) == r['melhor']:
+                for k, bin_items in enumerate(bins, 1):
+                    used = sum(bin_items)
+                    livre = r['C'] - used
+                    print(f"    [Estratégia: {nome_estrategia:>5}] Bin {k:>4}: {bin_items}  [usado={used}  livre={livre}]")
+                print() 
 
         print(
             f"\n  Melhor solução — {r['instance']}: {r['melhor']} bins"
-            f"  (LB={r['lb']}, estratégia: {r['best_strategy']})"
+            f"  (LB={r['lb']}, estratégia(s) empatada(s): {r['best_strategy']})"
         )
-        for k, bin_items in enumerate(r["best_bins"], 1):
-            used = sum(bin_items)
-            print(f"    Bin {k:>4}: {bin_items}  [usado={used}  livre={r['C'] - used}]")
 
