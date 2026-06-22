@@ -3,11 +3,11 @@
 ──────────────────────────────────────────────────────────────────────────────
  Nº  Instância      n      C  Val.Ini   Pior  Média  Melhor   %perda  tempo(s)
 ──────────────────────────────────────────────────────────────────────────────
-  0  BP-1          50   1000       22     20   20.0      20    17.65    0.0011
-  1  BP-2         100   1000       12     12   12.0      12     0.00    0.0019
-  2  BP-4         200   1000       49     42   42.0      42     0.00    0.0061
-  3  BP-6         500    150      260    201  201.0     201     1.52    0.0534
-  4  BP-7        1000    150      522    403  403.0     403     1.00    0.2077
+  0  BP-1          50   1000       22     20   20.0      20    17.65    0.0021
+  1  BP-2         100   1000       12     12   12.0      12     0.00    0.0031
+  2  BP-4         200   1000       49     42   42.0      42     0.00    0.0118
+  3  BP-6         500    150      260    201  201.0     201     1.52    0.0673
+  4  BP-7        1000    150      522    403  403.0     403     1.00    0.2290
 ──────────────────────────────────────────────────────────────────────────────
 
   [--- DETALHAMENTO DAS HEURISTICAS (PURAS E MISTAS) - BP-1 ---]
@@ -516,7 +516,7 @@
     [Estratégia: WFxBF] Bin   20: [272, 269, 267]  [usado=808  livre=192]
 
 
-  Melhor solução — BP-1: 20 bins  (LB=17, estratégia(s) empatada(s): FF, FFD, LF, LFD, BF, BFD, WF, WFD, NFxFF, NFxLF, NFxBF, NFxWF, FFxLF, LFxFF, FFxBF, BFxFF, FFxWF, WFxFF, LFxBF, BFxLF, LFxWF, WFxLF, BFxWF, WFxBF)
+  Melhor solução — BP-1: 20 bins  (LB=17, Tempo médio=0.0021s, estratégia(s) empatada(s): FF, FFD, LF, LFD, BF, BFD, WF, WFD, NFxFF, NFxLF, NFxBF, NFxWF, FFxLF, LFxFF, FFxBF, BFxFF, FFxWF, WFxFF, LFxBF, BFxLF, LFxWF, WFxLF, BFxWF, WFxBF)
 
   [--- DETALHAMENTO DAS HEURISTICAS (PURAS E MISTAS) - BP-2 ---]
     [Estratégia:    NF] Bin    1: [132, 132, 132, 132, 132, 130, 130]  [usado=920  livre=80]
@@ -975,7 +975,7 @@
     [Estratégia: WFxBF] Bin   12: [92, 91, 91, 91, 91, 90]  [usado=546  livre=454]
 
 
-  Melhor solução — BP-2: 12 bins  (LB=12, estratégia(s) empatada(s): NF, NFD, NFI, FF, FFD, FFI, LF, LFD, LFI, BF, BFD, BFI, WF, WFD, WFI, NFxFF, FFxNF, NFxLF, LFxNF, NFxBF, BFxNF, NFxWF, WFxNF, FFxLF, LFxFF, FFxBF, BFxFF, FFxWF, WFxFF, LFxBF, BFxLF, LFxWF, WFxLF, BFxWF, WFxBF)
+  Melhor solução — BP-2: 12 bins  (LB=12, Tempo médio=0.0031s, estratégia(s) empatada(s): NF, NFD, NFI, FF, FFD, FFI, LF, LFD, LFI, BF, BFD, BFI, WF, WFD, WFI, NFxFF, FFxNF, NFxLF, LFxNF, NFxBF, BFxNF, NFxWF, WFxNF, FFxLF, LFxFF, FFxBF, BFxFF, FFxWF, WFxFF, LFxBF, BFxLF, LFxWF, WFxLF, BFxWF, WFxBF)
 
   [--- DETALHAMENTO DAS HEURISTICAS (PURAS E MISTAS) - BP-4 ---]
     [Estratégia:    FF] Bin    1: [380, 379, 241]  [usado=1000  livre=0]
@@ -1409,7 +1409,7 @@
     [Estratégia: WFxBF] Bin   42: [79, 77, 75, 75, 71, 70, 67, 65, 59, 58, 56, 55, 31, 30, 30, 28, 27, 22, 22]  [usado=997  livre=3]
 
 
-  Melhor solução — BP-4: 42 bins  (LB=42, estratégia(s) empatada(s): FF, FFD, BF, BFD, LFxFF, FFxBF, BFxFF, WFxFF, LFxBF, WFxBF)
+  Melhor solução — BP-4: 42 bins  (LB=42, Tempo médio=0.0118s, estratégia(s) empatada(s): FF, FFD, BF, BFD, LFxFF, FFxBF, BFxFF, WFxFF, LFxBF, WFxBF)
 
   [--- DETALHAMENTO DAS HEURISTICAS (PURAS E MISTAS) - BP-6 ---]
     [Estratégia:   FFD] Bin    1: [100, 50]  [usado=150  livre=0]
@@ -2221,7 +2221,7 @@
     [Estratégia:   WFD] Bin  201: [22, 21, 21, 21, 21, 20, 20]  [usado=146  livre=4]
 
 
-  Melhor solução — BP-6: 201 bins  (LB=198, estratégia(s) empatada(s): FFD, LFD, BFD, WFD)
+  Melhor solução — BP-6: 201 bins  (LB=198, Tempo médio=0.0673s, estratégia(s) empatada(s): FFD, LFD, BFD, WFD)
 
   [--- DETALHAMENTO DAS HEURISTICAS (PURAS E MISTAS) - BP-7 ---]
     [Estratégia:   FFD] Bin    1: [100, 50]  [usado=150  livre=0]
@@ -3841,4 +3841,4 @@
     [Estratégia:   WFD] Bin  403: [20, 20, 20, 20, 20, 20]  [usado=120  livre=30]
 
 
-  Melhor solução — BP-7: 403 bins  (LB=399, estratégia(s) empatada(s): FFD, LFD, BFD, WFD)
+  Melhor solução — BP-7: 403 bins  (LB=399, Tempo médio=0.2290s, estratégia(s) empatada(s): FFD, LFD, BFD, WFD)
